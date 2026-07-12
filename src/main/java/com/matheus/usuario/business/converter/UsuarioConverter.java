@@ -50,12 +50,6 @@ public class UsuarioConverter {
                 .build();
     }
 
-
-
-
-
-
-
     public UsuarioDTO paraUsuarioDTO(Usuario usuarioDTO){
         return UsuarioDTO.builder()
                 .nome(usuarioDTO.getNome())
@@ -81,8 +75,6 @@ public class UsuarioConverter {
                 .cep(endereco.getCep())
                 .build();
     }
-
-
 
     public List<TelefoneDTO> paraListaTelefonesDTO(List<Telefone> telefoneDTOS){
         return telefoneDTOS.stream().map(this::paraTelefoneDTO).toList();
@@ -146,7 +138,4 @@ public class UsuarioConverter {
                 .usuario_id(idUsuario)
                 .build();
     }
-
-
-
 }
